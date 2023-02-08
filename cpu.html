@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
+  <!-- Add the slick-theme.css if you want default styling -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <!-- Add the slick-theme.css if you want default styling -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+  <style>
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .slider {
+        width: 90%;
+        margin: 100px auto;
+    }
+
+    .slick-slide {
+        margin: 0px 20px;
+    }
+
+    .slick-slide img {
+        /* width: 100%; */
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        color: black;
+    }
+
+
+    .slick-slide {
+        transition: all ease-in-out .3s;
+        opacity: .2;
+    }
+
+    .slick-active {
+        opacity: .5;
+    }
+
+    .slick-current {
+        opacity: 1;
+    }
+</style>
+
+</head>
+<body>
+  <!-- 抬頭 -->
+  <div class="container-fluid d-flex mx-auto">
+    <div class="row col-mt-12">
+      <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark n1 ">
+        <div class="col-md-4 collapse navbar-collapse" id="mynavbar">
+          <a class="navbar-brand" href="index.html">漲價任意門有限公司</a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="cpu.html">匯率</a>
+            </li>
+            <li class="nav-item">
+              <!-- <a class="nav-link" href="javascript:void(0)">顯卡</a> -->
+            </li>
+            <li class="nav-item">
+              <!-- <a class="nav-link" href="javascript:void(0)">記憶體</a> -->
+            </li>
+          </ul>
+        </div>
+
+
+        <!-- <div class="col-md-4  text-center">
+          <a class="navbar-brand" href="javascript:void(0)">便宜的在海上</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div> -->
+        <div class="col-md-4 collapse navbar-collapse justify-content-md-end" id="mynavbar">
+          <form class="d-flex">
+            <div class="collapse navbar-collapse" id="mynavbar">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0)"><i class="fa-brands fa-twitter"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0)"><i class="fa-brands fa-facebook"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0)"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+          </form>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <!-- /抬頭 -->
+  <!-- slick.js套件 -->
+  <div class="container-fluid slider autoplay">
+    <div>
+      <!-- <img src="https://picsum.photos/id/1004/500/300" /> -->
+      
+      <img src="./pictures/watercool.jpg"  class="d-block w-100 " style="width:500px;height: 300px;">
+    </div>
+    <div>
+      <img src="./pictures/case.jpg"  class="d-block w-100 " style="width:500px;height: 300px;">
+      
+    </div>
+    <div>
+      <img src="./pictures/mem.jpg"  class="d-block w-100 " style="width:500px;height: 300px;">
+      
+    </div>
+    <div>
+      <img src="./pictures/mouse.jpg"  class="d-block w-100 " style="width:500px;height: 300px;">
+      
+    </div>
+    <div>
+      <img src="./pictures/keyboard.jpg"  class="d-block w-100 " style="width:500px;height: 300px;">
+      
+    </div>
+    <div>
+      <img src="./pictures/earch.jpg"  class="d-block w-100 " style="width:500px;height: 300px;">
+    	
+    </div>
+  </div>
+  <!-- /slick.js套件 -->
+  <!-- ajex api -->
+   
+    <br><br><br>
+    <div class="container-fluid">
+        <h2>匯率參考資料</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>排序</th>
+                    <th>日期</th>
+                    <th>幣種</th>
+                    <th>即時買入匯率</th>
+                    <th>即時賣出匯率</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <button id="mybtn">print</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"
+        integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+    <script>
+$('.autoplay').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+});
+        // https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=rdec-key-123-45678-011121314
+        $(function () {
+
+            // CWB-C0ECFB19-DA53-46EF-BC76-146F83535780
+            // const myul = $('#myul');
+            // const mybtn = $('#mybtn');
+            const tbody = $('tbody');
+            mybtn.click(function () {
+                window.print();//window原生有的功能 列印功能
+            });
+            // ajax 範本
+            $.ajax({
+                url: "./2c3dface88d5ffd4859f990dd583d287_export.json",
+                type: "get",
+                dataType: 'json',
+                success: function (res) {//成功時 function跑url裡面的資料陣列 名稱設為res
+                    console.log('res', res);
+                    let data = res;
+                    console.log('data', data);
+                    console.log('data[3]', data[3]);
+                    // console.log('mint', data[19].weatherElement[2].time[0].parameter.parameterName);
+                    // console.log('maxt', data[19].weatherElement[4].time[0].parameter.parameterName);
+                    let textcontext = "" //宣告textcontext為空值
+                    $.each(data, function (key, value) { //foreach 迴圈
+                        console.log('key', key);
+                        console.log('value', value);
+                        //    let textcontext= ${key + 1}  ${value.weatherElement[0].time[0].startTime} ${value.weatherElement[2].time[0].parameter.parameterName}&deg;C~${value.weatherElement[4].time[0].parameter.parameterName}&deg;C;
+
+                        textcontext += `
+
+          
+           
+            <tr>
+              <td>${key + 1}</td>
+
+              <td>${value.\u65e5\u671f}</td>
+        
+              <td>${value.\u5e63\u5225}</td>
+   
+              <td>${value.\u5373\u671f\u8cb7\u5165\u532f\u7387}</td>
+              <td>${value.\u5373\u671f\u8ce3\u51fa\u532f\u7387}</td>
+
+         
+    </tr>
+        
+                            `;
+                        //                     //因為資料是array 所以要+[]指定第幾個key值
+                    });
+                    tbody.append(textcontext);
+
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+
+                }
+            });
+            // ajax end
+        });
+
+
+    </script>
+  <!-- ajex api -->
+
+</body>
+</html>

@@ -1,58 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>國立科技高中─校園社團介紹網</title>
-    <link rel="stylesheet" href="./css/style.css">
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+
 </head>
-<body class="main">
-    <!-- top -->
-    
-    <header class="top">
-        <a href="./index.html"><img src="./images/logo.png" alt="國立科技高中校園社團介紹網"></a>
-        </header>
+<style>
 
-    <!-- left -->
-    <aside class="aside">
-       <!-- aside  -->
-       <!-- left 選單區 -->
-       <nav class="menu">
-            <div class="menu-header">
-                社團介紹
-            </div>
-            <a href="./guitar_history.html" target="myMain" id="menuBtn">吉他社</a>
-            <a href="">熱舞社</a>
-            <a href="">棒球社</a>
-            <a href="">羽球社</a>
-            <a href="">足球社</a>
-            <a href="">童軍社</a>
 
-       </nav>
-       <footer class="update">
-        最近更新日期：2022/10/13
-       </footer>
-    </aside>
 
-    <!-- right -->
-    <section class="section">
-        <!-- section -->
-        <header class="marquee">
-            <marquee behavior="" direction="">
-                歡迎光臨校園社團介紹網，參觀後請支持社團活動並熱烈參與
-            </marquee>
-        </header>
-        <main class="content">
-            <!-- content -->
-            <!-- main -->
-            <iframe src="./main.html" frameborder="0" name="myMain"></iframe>
-        </main>
-    </section>
-    <!-- footer -->
-    <footer class="footer">
-        網頁設計及維護：XX○○○
-    </footer>
+</style>
 
+<body>
+  <!-- 抬頭 -->
+  <div class="container-fluid d-flex mx-auto">
+    <div class="row col-mt-12">
+      <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark n1 ">
+        <div class="col-md-4 collapse navbar-collapse" id="mynavbar">
+          <a class="navbar-brand" href="javascript:void(0)">漲價任意門有限公司</a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="cpu.html">匯率</a>
+            </li>
+            <li class="nav-item">
+              <!-- <a class="nav-link" href="javascript:void(0)">顯卡</a> -->
+            </li>
+            <li class="nav-item">
+              <!-- <a class="nav-link" href="javascript:void(0)">記憶體</a> -->
+            </li>
+          </ul>
+        </div>
+
+
+        <!-- <div class="col-md-4  text-center">
+          <a class="navbar-brand" href="javascript:void(0)">便宜的在海上</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div> -->
+        <div class="col-md-4 collapse navbar-collapse justify-content-md-end" id="mynavbar">
+          <form class="d-flex">
+            <div class="collapse navbar-collapse" id="mynavbar">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="https://twitter.com/?lang=zh-Hant"><i class="fa-brands fa-twitter"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://zh-tw.facebook.com/)"><i class="fa-brands fa-facebook"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+          </form>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <!-- /抬頭 -->
+  <!-- 跑馬燈 -->
+
+  <div class="row col-mt-12" style="height: 400px;">
+    <div id="demo" class="carousel slide  " data-bs-ride="carousel">
+
+      <!-- The slideshow/carousel -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./pictures/4090.jpg" alt="nvidia" class="d-block w-100 " style="width:50%;height: 400px;">
+
+        </div>
+        <div class="carousel-item">
+          <img src="./pictures/amd.jpg" alt="amd" class="d-block w-100" style="width:50%;height: 400px;">
+        </div>
+        <div class="carousel-item">
+
+          <img src="./pictures/inter.jpg" alt="inter" class="d-block w-100" style="width:50%;height: 400px;">
+        </div>
+      </div>
+
+      <!-- Left and right controls/icons -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev"
+        style="height: 400px;">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next"
+        style="height: 400px;">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- /跑馬燈 -->
+
+  <!-- 關於我們 -->
+  <div class="container-fluid d-flex mx-auto pt-5 pb-5  ">
+    <div class="col-md-12 d-flex justify-content-center  mx-auto ">
+      <div class="row text-center  zz " style="font-size: x-large;">
+        <div>
+          <h1 class="about"><i class="fa-solid fa-face-grin-tongue-wink"></i>關於我們</h1>
+        </div>
+        <div>
+          <p class="alert alert-primary p-0">提供最優惠的價格</p>
+        </div>
+        <div>
+          <p class="alert alert-primary p-0" style=" text-decoration: line-through;">杜絕漲價歪風</p>
+        </div>
+        <div>
+          <p class="alert alert-primary p-0">挑戰業界最久保固!!!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /關於我們 -->
+  <!-- 服務項目 -->
+  <div class="container-fluid d-flex mx-auto  justify-content-center bg-dark pt-5 pb-5">
+    <div>
+      <span class="line"></span>
+      <span class="about" style="color: white;">服務項目</span>
+      <span class="line"></span>
+    </div>
+  </div>
+  <!-- /服務項目 -->
+  <div class="container-fluid d-flex    justify-content-center bg-dark pb-5 ">
+    <div class="col-mt-3">
+      <div class="row ">
+        <div class="bigfont">
+          <p>零件買賣</p>
+        </div>
+        <div class="smallfont">
+          <P>各種電腦零組件批發零售，</P>
+          <p>鍵盤滑鼠耳機等相關設備試用展示</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-mt-3">
+      <div class="row ">
+        <div class="bigfont">
+          <p>電腦組裝除錯</p>
+        </div>
+        <div class="smallfont">
+          <P>購買整套主機零件，可免費安裝，並提供保固，</P>
+          <p>可代客送修保固，電腦異常除錯修復</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-mt-3">
+      <div class="row ">
+        <div class="bigfont">
+          <p>高階水冷客製</p>
+        </div>
+        <div class="smallfont">
+          <P>客置個人化特色水冷主機</P>
+          <p>水路設計，客製水管長度彎度等</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-mt-3">
+      <div class="row ">
+        <div class="bigfont">
+          <p>礦機訂製</p>
+        </div>
+        <div class="smallfont">
+          <P>挖礦主機多樣化組合</P>
+          <p>可客製挖各種幣種</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- card -->
+  <div class="container-fluid d-flex mx-auto pt-5 pb-5 ">
+    <div class="container col-mt-3 hover-box">
+      <h2>ROG Strix GeForce RTX™ 4090 OC 超頻版 24GB GDDR6X</h2>
+      <div class="" style="width:400px">
+        <img class="card-img-top" src="./pictures/4090rog.png" alt="Card image" style="width:100%;height:200px" onclick="asusimg()">
+        <div class="card-body">
+
+          <p class="card-text">更多介紹點擊圖片...</p>
+          <!-- <a href="" class="btn btn-primary">More...</a> -->
+        </div>
+      </div>
+    </div>
+    <div class="container col-mt-3 hover-box">
+      <h2>GeForce RTX™ 4090 GAMING X TRIO 24G</h2>
+      <br>
+      <div class="" style="width:400px">
+        <img class="card-img-top" src="./pictures/4090msi.png" alt="Card image" style="width:100%;height:200px" onclick="msiimg()">
+        <div class="card-body">
+          <p class="card-text">更多介紹點擊圖片...</p>
+          <!-- <a href="" class="btn btn-primary">More...</a> -->
+        </div>
+      </div>
+    </div>
+    <div class="container col-mt-3 hover-box">
+      <h2>AORUS GeForce RTX™ 4090 XTREME WATERFORCE 24G</h2>
+    <br>
+      <div class="" style="width:400px">
+        <img class="card-img-top" src="./pictures/4060g.png" alt="Card image" style="width:100%;height:200px" onclick="aorusimg()">
+        <div class="card-body">
+     
+          <p class="card-text"> 
+          更多介紹點擊圖片...</p>
+          <!-- <a href="" class="btn btn-primary">More...</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /card -->
+  <!-- 聯絡資訊 -->
+  <div class="container-fluid d-flex mx-auto bg-secondary">
+    <div class="row">
+      <div class="col-md-12 pt-5   ">
+        <h1 style=" margin-left: 10vh;"><i class="fa-solid fa-house"></i>聯絡資訊</h1>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid bg-secondary ">
+    <div class="row ">
+      <div class="col-md-6  p-2  ">
+        <div>
+          <img src="./pictures/test.png" alt="" style="height:20vh; width: 20vh;margin-left: 50vh;">
+        </div>
+      </div>
+      <div class="col-md-6  p-2  connection">
+        <h1>漲價任意門</h2>
+          <h3>地址:243新北市泰山區貴子里致遠新村55之1號</h3>
+          <p>連絡電話:7444721721</p>
+          <p>email:6666@gmail.com</p>
+          <p>營業時間:13:00-22:00</p>
+
+      </div>
+    </div>
+  </div>
+  <!-- /聯絡資訊 -->
+  <!-- 地圖 -->
+  <div class="container-fluid d-flex mx-auto ">
+
+    <div class="row col-md-12 justify-content-center ">
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m17!1m8!1m3!1d8690.597275207861!2d121.00164157707718!3d23.677887335999493!3m2!1i1024!2i768!4f13.1!4m6!3e3!4m3!3m2!1d23.6727576!2d121.0037595!4m0!5e0!3m2!1szh-TW!2stw!4v1672152877807!5m2!1szh-TW!2stw"
+        width="600" height="200" style="border:0;   " allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </div>
+  </div>
+  <!-- /地圖 -->
+  <!-- 最底層 -->
+  <footer class="bg-secondary py-3 ">
+    <div class="container">
+      <p class="text-center mb-0">僅供網頁動態技術作業使用</p>
+    </div>
+  </footer>
+<!-- /最底層 -->
+<script>
+  function asusimg() {
+    alert("ROG Strix GeForce RTX™ 4090 OC 超頻版 24GB GDDR6X 支援 DLSS 3 全面進化，提供絕佳散熱與耐用性。");
+  }
+  function msiimg() {
+    alert("NVIDIA® GeForce RTX® 4090 為終極GeForce GPU。在效能、效率和人工智慧驅動的圖形方面帶來了巨大的躍升。體驗超高效能遊戲、帶有光線追踪功能的極其詳細的虛擬世界、前所未有的生產力和新的創作方式。由NVIDIA Ada Lovelace架構支持，並配備24 GB G6X記憶體，為遊戲玩家和創作者提供終極體驗。");
+  }
+  function aorusimg() {
+    alert("採用 GeForce RTX™ 4090 繪圖晶片， 內建 24GB GDDR6X 384位元記憶體， 水之力-一體封閉式水冷散熱系統， 360mm鋁製冷排與三個12公分風扇。");
+  }
+  </script>
 </body>
+
 </html>
